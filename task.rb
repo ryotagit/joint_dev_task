@@ -33,7 +33,8 @@ def q4
 
   # 以下に回答を記載
   p sports
-  sports.delete(nil)
+  # sports.delete(nil)
+  sports.compact!
   # 以下は変更しないで下さい
   p sports
 end
@@ -43,14 +44,19 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-
+  # anyはnilかどうかemptyは入っているかどうかの判定ここではemptyが適切だと判断
+  p !array1.empty?
+  p !array2.empty?
+  
+  p array1.any?
+  p array2.any?
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  numbers2 
 end
 
 def q7
