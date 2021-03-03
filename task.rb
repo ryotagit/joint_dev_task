@@ -58,7 +58,7 @@ def q6
   # 以下に回答を記載
   numbers2 = []
   
-  numbers1.each do  |number|
+  numbers1.map do  |number|
     numbers2 << number * 10
   end
   
