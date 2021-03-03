@@ -102,18 +102,23 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-  foods.each do |food|
-    puts food
-    if
-      food == "うに"
+  # foods.each do |food|
+  #   puts food
+  #   if food == "うに"
+  #     puts"好物です"
+  #   else
+  #     puts "まぁまぁ好きです"
+  #   end
+  # end
+  
+  foods.map do |item|  
+    if item.include?("うに") 
       puts"好物です"
     else
       puts "まぁまぁ好きです"
     end
-  end
-
+ end
 end
-
 def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
@@ -131,6 +136,8 @@ def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
+  # 参考→https://blog.codecamp.jp/beginner-ruby-application
+  puts data[:user][:name]
 
 end
 
