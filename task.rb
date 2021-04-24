@@ -297,18 +297,19 @@ class Zoo
     @entry_fee = entry_fee
   end
   
-  def info_entry_fee(users)
+  def info_entry_fee(user)
     
-    if age <= 9
-      puts "#{user.name}さんの入場料金は #{infant}円です。"
-    elsif age <= 20
-      puts "#{user.name}さんの入場料金は #{children}円です。"
-    elsif age <= 65
-      puts "#{user.name}さんの入場料金は #{adult}円です。"
-    else
-      puts "#{name}さんの入場料金は #{senior}円です。"
+    if user.age <= 5
+      @fee = entry_fee[:infant]
+    elsif user.age <=12
+      @fee = entry_fee[:children]
+    elsif user.age <=64
+      @fee = entry_fee[:adult]
+    elsif user.age <=120
+      @fee = entry_fee[:senior]
     end
-
+    
+    puts "#{user.name}さんの入場料は #{@fee} 円です。"
   end
 
 end
