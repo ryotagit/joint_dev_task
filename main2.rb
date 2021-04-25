@@ -20,13 +20,16 @@ class Zoo
   
   def info_entry_fee(user)
     
-    if user.age <= 5
+    # 比較対象をcaseの後に記述
+    case user.age
+    # 比較対象と比較する値を記述
+    when 3..5
       @fee = entry_fee[:infant]
-    elsif user.age <=12
+    when 6..12
       @fee = entry_fee[:children]
-    elsif user.age <=64
+    when 13..64
       @fee = entry_fee[:adult]
-    elsif user.age <=120
+    when 65..120
       @fee = entry_fee[:senior]
     end
     
